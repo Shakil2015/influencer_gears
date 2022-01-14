@@ -1,14 +1,121 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* font-family: 'Roboto', sans-serif; */
+/* font-family: 'Rubik', sans-serif; */
 * {
   box-sizing: border-box;
 }
 body {
-  font-family: 'Roboto', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
+  padding: 0;
 }
+/* custom properties start */
+:root {
+  --title-color: #3a3a3a;
+  --button-color: #e02c6d;
+}
+/* custom properties end */
+/* common class start */
+.central-align {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.container {
+  width: 1110px;
+  display: flex;
+}
+/* common class end */
+/* header start */
+.header {
+  padding: 10px 0;
+}
+.logo {
+  width: 30%;
+}
+
+.nav {
+  width: 70%;
+  text-align: right;
+}
+.nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav ul > li > a {
+  display: inline-block;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 600;
+  color: #3a3a3a;
+}
+.nav ul > li > a:hover {
+  color: var(--button-color);
+  transition: color 0.5s ease-in;
+}
+/* header end */
+/* influencer start */
+.influencer-left {
+  width: 50%;
+}
+.influencer-left > h1 {
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--title-color);
+}
+.influencer-left > p {
+  color: var(--title-color);
+  font-size: 16px;
+}
+.influencer-left > a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  padding: 0.7em 2em;
+  margin-top: 5px;
+  border-radius: 2em;
+  background-color: var(--button-color);
+}
+.influencer-right {
+  width: 50%;
+  /* box-shadow: 0 2px 20px var(--button-color);
+  /* border: 2px solid var(--button-color); */
+  /* border-radius: 10px;  */
+}
+.influencer-right > img {
+  width: 440px;
+  height: 414px;
+}
+.influencer-right:hover img {
+  transform: scale(120%);
+  transition: transform 0.7s ease-in-out;
+}
+/* influencer end */
+
+/* brand start */
+.brand-grid {
+  width: 1110px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-column-gap: 5px;
+  box-shadow: 1px 0px 10px var(--title-color);
+}
+.brand-grid-item {
+  padding: 20px;
+}
+.brand-grid-item > img {
+  width: 99.12px;
+  height: 39.61px;
+}
+/* brand end */
