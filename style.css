@@ -38,8 +38,12 @@ body {
 }
 .logo {
   width: 30%;
+  text-align: left;
 }
-
+.logo img {
+  width: 50px;
+  height: 50px;
+}
 .nav {
   width: 70%;
   text-align: right;
@@ -65,6 +69,7 @@ body {
   transition: color 0.5s ease-in;
 }
 /* header end */
+
 /* influencer start */
 .influencer-left {
   width: 50%;
@@ -91,9 +96,6 @@ body {
 }
 .influencer-right {
   width: 50%;
-  /* box-shadow: 0 2px 20px var(--button-color);
-  /* border: 2px solid var(--button-color); */
-  /* border-radius: 10px;  */
 }
 .influencer-right > img {
   width: 440px;
@@ -198,10 +200,12 @@ body {
 }
 .photography-influencer-title {
   text-align: center;
+  font-size: 28px;
+  font-weight: 600;
 }
 .photography-influencer-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 20px;
 }
 .photography-influencer-individual {
@@ -221,16 +225,17 @@ body {
 }
 .photography-influencer-individual-expertise {
   position: absolute;
-  top: 170px;
-  left: 36px;
-  padding: 10px 100px;
+  top: 80%;
+  left: 7.2%;
+  width: 84%;
+  padding: 10px 0px;
   background-color: white;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
 }
 .photography-influencer-individual-expertise h2 {
   font-size: 20px;
   text-align: center;
-  color: var(--button-color);
+  color: var(--title-color);
 }
 .photography-influencer-individual:hover
   .photography-influencer-individual-expertise {
@@ -239,6 +244,7 @@ body {
 }
 
 /* photography-influencer end */
+
 /* foorter start */
 .footer {
   background-color: var(--title-color);
@@ -292,3 +298,140 @@ h5 {
   transform: translate(-50%, -50%);
 }
 /* footer end */
+
+/* Responsive with media query start */
+
+@media only screen and (max-width: 768px) {
+  /* for header */
+
+  .container {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    width: 100%;
+    text-align: center;
+  }
+  .header > .logo img {
+    float: right;
+    padding-top: 20px;
+  }
+  .header > .nav {
+    width: 100%;
+  }
+  nav ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* for influencer */
+
+  .influencer-left {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+  .influencer-right {
+    width: 100%;
+    text-align: center;
+  }
+  /* for brand */
+  .brand-grid {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .brand-grid-item {
+    width: 100%;
+  }
+
+  /* for popular-collection */
+  .popular-collection-grid {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .popular-collection-grid-item {
+    text-align: center;
+  }
+
+  /* for photography-influencer */
+
+  .photography-influencer-grid {
+    width: 100%;
+    grid-row-gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .photography-influencer-individual {
+    text-align: center;
+  }
+  .photography-influencer-individual-expertise {
+    width: 60%;
+    top: 80%;
+    left: 20%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* for header */
+  .container {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    width: 100%;
+    text-align: center;
+  }
+  .header > .logo img {
+    padding-top: 20px;
+  }
+  .header > .nav {
+    width: 100%;
+  }
+  /* for influencer */
+  .influencer-left {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+  .influencer-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* for brand */
+  .brand-grid {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .brand-grid-item {
+    width: 100%;
+  }
+
+  /* for popular-collection */
+  .popular-collection-grid {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .popular-collection-grid-item {
+    text-align: center;
+  }
+
+  /* for photography-influencer */
+
+  .photography-influencer-grid {
+    width: 100%;
+    grid-row-gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .photography-influencer-individual {
+    text-align: center;
+  }
+  .photography-influencer-individual-expertise {
+    width: 84%;
+  }
+}
+
+/* Responsive with media query end */
