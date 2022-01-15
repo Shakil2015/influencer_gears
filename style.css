@@ -206,9 +206,10 @@ body {
 .photography-influencer-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 20px;
+  grid-column-gap: 4%;
 }
 .photography-influencer-individual {
+  /* width: 29.33%; */
   position: relative;
 }
 .photography-influencer-individual
@@ -226,9 +227,9 @@ body {
 .photography-influencer-individual-expertise {
   position: absolute;
   top: 80%;
-  left: 7.2%;
-  width: 84%;
-  padding: 10px 0px;
+  left: 5%;
+  width: 90%;
+  padding: 5% 20%;
   background-color: white;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
 }
@@ -357,11 +358,15 @@ h5 {
   }
 
   /* for photography-influencer */
+  .photography-influencer {
+    margin-bottom: 20%;
+  }
 
   .photography-influencer-grid {
     width: 100%;
-    grid-row-gap: 20px;
+    grid-row-gap: 15%;
     grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 30%;
   }
   .photography-influencer-individual {
     text-align: center;
@@ -370,6 +375,11 @@ h5 {
     width: 60%;
     top: 80%;
     left: 20%;
+  }
+  .photography-influencer-individual:hover
+    .photography-influencer-individual-expertise {
+    top: 70px;
+    transition: top 0.4s ease-in 0.2s;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -430,7 +440,14 @@ h5 {
     text-align: center;
   }
   .photography-influencer-individual-expertise {
-    width: 84%;
+    width: 60%;
+    top: 80%;
+    left: 20%;
+  }
+  .photography-influencer-individual:hover
+    .photography-influencer-individual-expertise {
+    top: 75px;
+    transition: top 0.4s ease-in 0.2s;
   }
 }
 
